@@ -2,8 +2,5 @@
 resource "aws_s3_bucket" "tf_test_ajinkya_bucket" {
   bucket = "my-tf-test-ajinkya-bucket-101"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+  tags = local.common_tags
 }
